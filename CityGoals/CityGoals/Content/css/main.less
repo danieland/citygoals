@@ -1,0 +1,156 @@
+﻿@import 'setup.less';
+@import 'fonts.less';
+@import 'reset.less';
+
+body {
+    background-color: @body-background;
+    color: @standard-text-color;
+    font-size: 20px;
+}
+
+.stats {
+    display: flex;
+    .flex-flow(row wrap);
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 94%;
+}
+
+.stat {
+    border-radius: 10px;
+    box-shadow: 0 0 2px #ddd;
+    margin: 12px;
+    padding: 12px;
+    text-align: center;
+    .transition(box-shadow ease 0.3s);
+}
+
+.stat-value {
+    color: #142248;
+    font-size: 140%;
+}
+
+.highlight {
+    box-shadow: 0 0 12px 4px #00FFFF;
+}
+
+header {
+    background-color: rgba(0,0,0,0.5);
+}
+
+section {
+    background-color: @section-background;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #595A5A;
+    display: flex;
+    .flex-flow(column wrap);
+    font-size: 90%;
+    margin: 20px auto;
+    max-width: 1440px;
+    padding: 20px;
+    .transition(opacity ease-in-out 0.4s);
+    width: 94%;
+
+    @media (min-width: 700px){
+        font-size: 125%;
+    }
+}
+
+h1 {
+    .flex(1 100%);
+    font-weight: 700;
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
+
+progress {
+    width: 100%;
+}
+
+.game.noplayers {
+    opacity: 0.4;
+}
+
+.game-wrapper {
+    min-height: 120px;
+    position: relative;
+    text-align: center;
+}
+
+.kickoff {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    display: inline-block;
+    outline: none;
+    position: relative;
+}
+
+.commentary {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    cursor: default;
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+.player {
+    display: flex;
+    position: relative;
+}
+
+.manager {
+    position: relative;
+}
+
+.unsigned > .avatar, .unsigned > .character {
+    opacity: 0.4;      
+}
+
+.sign {
+    border: 0;
+    border-radius: 22px;
+    box-shadow: 0 0 8px #000;
+    left: 50%;
+    min-height: 20px;
+    outline: none;
+    padding: 8px;
+    position: absolute;
+    top: 50%;
+    .transform-xy(-50%);
+    width: 50%;
+}
+
+.avatar {
+    display: none;
+    .transition(opacity ease-in-out 0.4s);
+
+    @media (min-width: 700px) {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.character {
+    display: inline-block;
+    .flex(1);
+    margin-left: 12px;
+    .transition(opacity ease-in-out 0.4s);
+    vertical-align: top;
+}
+
+.trait {
+    font-size: 74%;
+    vertical-align: middle;
+}
+
+.training {
+    display: block;
+    margin: 0 auto;
+}

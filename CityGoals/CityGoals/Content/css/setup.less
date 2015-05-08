@@ -1,0 +1,34 @@
+﻿/*#region Variables */
+@standard-text-color: rgb(255, 255, 255);
+@body-background: rgb(92, 191, 235);
+@section-background: rgb(20, 34, 72);
+/*#endregion */
+
+/*#region Functions */
+.box-sizing(@value) {
+    -moz-box-sizing: @value;
+    -webkit-box-sizing: @value;
+    box-sizing: @value;
+}
+.flex-flow(@value) {
+    -ms-flex-flow: @value;
+    flex-flow: @value;
+}
+.flex(@value) {
+    -ms-flex: @value;
+    flex: @value;
+}
+.transform-xy(@value) {
+    -moz-transform: translate(@value, @value);
+    -ms-transform: translate(@value, @value);
+    -o-transform: translate(@value, @value);
+    -webkit-transform: translate(@value, @value);
+    transform: translate(@value, @value);
+}
+.transition(@value) {
+    -moz-transition: @value;
+    -o-transition: @value;
+    -webkit-transition: @value;
+    transition: @value;
+}
+/*#endregion */

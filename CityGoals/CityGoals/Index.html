@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>CityGoals</title>
+        <link rel="stylesheet" href="/Content/css/main.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="stats">
+                <div class="stat">
+                    <h2>Avaliable budget (£)</h2>
+                    <span id="js-budget" class="budget stat-value">100</span>
+                </div>
+                <div class="stat">
+                    <h2>Total goals</h2>
+                    <span class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <h2>Team rank</h2>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <section class="game noplayers">
+            <h1>Play!</h1>
+            <progress id="game" max="90" value="0"></progress>
+            <div class="game-wrapper">
+                <div class="commentary hide">
+                    <h2><span id="minute">0</span> min</h2>
+                    <p>Man City <span id="goals">0</span> - 0 <span id="js-opponent">????</span></p>
+                    <p id="js-commentary">Kickoff at the Etihad!</p>
+                </div>
+                <button class="kickoff" id="js-kickoff">
+                    <img src="/Content/images/ball.png" alt="Kick off!" />
+                </button>
+            </div>
+        </section>
+
+
+        <section>
+            <h1>Your players:</h1>
+            <ul>
+                <li class="unsigned player">
+                    <img class="avatar" src="/Content/images/players/1.png" alt="" />
+                    <div class="character">
+                        <h2>Joe Hart</h2>
+                        <p class="trait">(0.1% extra goal chance)</p>
+                        <progress id="p1" max="10" value="0"></progress>
+                        <button type="button" class="training">Training session (<span>£100</span>)</button>
+                    </div>
+                    <button data-price="100" class="sign js-sign">Sign Joe Hart for £100</button>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1>Your manager:</h1>
+            <ul>
+                <li class="unsigned manager">
+                    <img class="avatar" src="/Content/images/managers/1.jpg" alt="" />
+                    <div class="character">
+                        <h2>Manuel Pellegrini</h2>
+                        <p class="trait">(10% extra goal chance)</p>
+                    </div>
+                    <button data-price="1000000" class="sign">Sign Manuel Pellegrini for £1.000.000</button>
+                </li>
+            </ul>
+        </section>
+        
+        <script>
+            var globalOpponents = ['Chelsea', 'Man United', 'Arsenal'];
+            var globalGoal = ['Splendid goal!', 'GOAL! WHAT A STUNNER!'];
+            var globalChat = ['Quite a boring game today.', 'Nothing much going on...'];
+            var globalKickoff = ['Etihad is buzzing, kickoff!', 'Players are ready, kickoff!'];
+        </script>
+        <script src="/Content/javascript/main.min.js"></script>
+    </body>
+</html>
